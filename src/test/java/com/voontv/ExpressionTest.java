@@ -15,6 +15,6 @@ public class ExpressionTest {
     @Test
     public void test_subtract(){
         Expression expression = new Expression();
-        assertEquals(expression.subtract(1, 2), 2);
+        assertEquals(expression.subtract(4, 2), 2);
     }
 }
