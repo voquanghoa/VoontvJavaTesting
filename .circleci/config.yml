@@ -1,7 +1,5 @@
 version: 2.0
 
-CODECOV_TOKEN="f1b7eb21-d3cf-4228-a19c-9aaed7923908"
-
 jobs:
     build:
         docker:
