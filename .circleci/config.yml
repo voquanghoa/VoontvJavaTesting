@@ -1,5 +1,7 @@
 version: 2.0
 
+CODECOV_TOKEN="f1b7eb21-d3cf-4228-a19c-9aaed7923908"
+
 jobs:
     build:
         docker:
@@ -21,3 +23,12 @@ jobs:
             - store_artifacts:
                 path: build/libs
 destination: libs
+
+general:
+    artifacts:
+        - "build/reports/jacoco"
+
+test:
+    post:
+        - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+        - bash <(curl -s https://codecov.io/bash)
