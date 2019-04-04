@@ -4,10 +4,10 @@ public class Exercise3 {
     public String removesCharacterRedundancy (String string) {
         StringBuilder builder = new StringBuilder(string);
 
-        for (int i=string.length()-1; i >0; i--) {
-            char c = string.charAt(i);
+        for(int i = string.length() - 1; i > 0; i--) {
+            char ch = string.charAt(i);
             char nextChar = string.charAt(i-1);
-            if(c == nextChar) {
+            if(ch == nextChar) {
                 builder.deleteCharAt(i);
             }
         }
