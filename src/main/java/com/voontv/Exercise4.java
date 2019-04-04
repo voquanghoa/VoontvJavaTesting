@@ -5,9 +5,9 @@ public class Exercise4 {
     public int totalChildArrayMaxInArray (int[] a) {
         int total = 0;
         int sumChildArray = 0;
-        for(int i=0; i<a.length; i++){
-            if (a[i] >=0) {
-                sumChildArray += a[i];
+        for (int value : a) {
+            if (value >= 0) {
+                sumChildArray += value;
             } else {
                 if (total <= sumChildArray) {
                     total = sumChildArray;

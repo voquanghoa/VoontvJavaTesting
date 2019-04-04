@@ -2,7 +2,6 @@ package com.voontv;
 
 public class Exercise1 {
     public boolean checkFirstRulesWithUsername (String username) {
-        boolean check=true;
 
         for (int i=0; i < username.length(); i++){
             char c = username.charAt(i);
@@ -12,11 +11,10 @@ public class Exercise1 {
             }
 
         }
-        return check;
+        return true;
     }
 
     public boolean checkSecondRulesWithUsername (String username) {
-        boolean check=true;
 
         for (int i = 0; i < username.length()-1; i++) {
             char c = username.charAt(i);
@@ -25,7 +23,7 @@ public class Exercise1 {
                 return  false;
             }
         }
-        return check;
+        return true;
     }
 
     public boolean checkFistAndLastCharacter (String username) {
@@ -34,7 +32,6 @@ public class Exercise1 {
     }
 
     public boolean checkFirstRulesWithDomain (String domain) {
-        boolean check = true;
 
         for (int i=0; i<domain.length(); i++) {
             char c = domain.charAt(i);
@@ -42,11 +39,10 @@ public class Exercise1 {
                 return false;
             }
         }
-        return check;
+        return true;
     }
 
     public boolean countDotsInDomain (String domain) {
-        boolean check = true;
         int count = 0;
 
         for ( int i = 0; i<domain.length(); i++) {
@@ -57,10 +53,9 @@ public class Exercise1 {
         if(count >3 || count <1) {
             return false;
         }
-        return check;
+        return true;
     }
     public boolean checkRulesPositionsDots (String domain) {
-        boolean check = true;
 
         for (int i=0; i<domain.length()-1; i++) {
             char c = domain.charAt(i);
@@ -70,7 +65,7 @@ public class Exercise1 {
                 return false;
             }
         }
-        return check;
+        return true;
     }
 
     public boolean isSpecialAcceptInUsername (char c) {
