@@ -18,7 +18,7 @@ public class Exercise1 {
 
         for (int i = 0; i < username.length()-1; i++) {
             char c = username.charAt(i);
-            char nextChar = username.charAt(i+1);
+            char nextChar = username.charAt(i + 1);
             if (isSpecialAcceptInUsername(c) && isSpecialAcceptInUsername(nextChar)) {
                 return  false;
             }
@@ -27,8 +27,23 @@ public class Exercise1 {
     }
 
     public boolean checkFistAndLastCharacter (String username) {
+        char c = username.charAt(0);
+        char last = username.charAt(username.length() - 1);
+        boolean checkFistChar;
+        boolean checLastChar;
 
-        return (Character.isLowerCase (username.charAt(0)) && Character.isLowerCase(username.charAt(username.length()-1)));
+        if (Character.isDigit(c) || Character.isLetter(c) || (c == '_')) {
+            checkFistChar = true;
+        } else {
+            checkFistChar = false;
+        }
+
+        if (Character.isDigit(last) || Character.isLetter(last) || (last == '_')) {
+            checLastChar = true;
+        } else {
+            checLastChar = false;
+        }
+        return (checkFistChar && checLastChar);
     }
 
     public boolean checkFirstRulesWithDomain (String domain) {
@@ -54,10 +69,10 @@ public class Exercise1 {
     }
     public boolean checkRulesPositionsDots (String domain) {
 
-        for (int i=0; i<domain.length()-1; i++) {
+        for (int i=0; i<domain.length() - 1; i++) {
             char c = domain.charAt(i);
-            char nextChar = domain.charAt(i+1);
-            if ((c == '.' && i == 0) || (i == domain.length()-2 && nextChar == '.')
+            char nextChar = domain.charAt(i + 1);
+            if ((c == '.' && i == 0) || (i == domain.length() - 2 && nextChar == '.')
                     || (c == nextChar && c == '.')) {
                 return false;
             }

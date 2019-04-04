@@ -25,9 +25,9 @@ public class Exercise1Test {
     @Test
     public void test_checkFistAndLastCharacter () {
         Exercise1 exercise1 = new Exercise1 ();
-        assertFalse(exercise1.checkFistAndLastCharacter("Toi_la_toi"));
+        assertFalse(exercise1.checkFistAndLastCharacter("?Toi_la_toi"));
         assertTrue(exercise1.checkFistAndLastCharacter("toi_la_toi"));
-        assertFalse(exercise1.checkFistAndLastCharacter("Toi_la_toI"));
+        assertFalse(exercise1.checkFistAndLastCharacter("Toi_la_toI-"));
     }
 
     @Test
