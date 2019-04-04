@@ -50,10 +50,7 @@ public class Exercise1 {
                 count++;
             }
         }
-        if(count >3 || count <1) {
-            return false;
-        }
-        return true;
+        return count <= 3 && count >= 1;
     }
     public boolean checkRulesPositionsDots (String domain) {
 
