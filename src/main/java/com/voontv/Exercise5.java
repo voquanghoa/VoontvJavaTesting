@@ -2,21 +2,18 @@ package com.voontv;
 
 public class Exercise5 {
 
-    public int getMinCommonMultiplesInArray(int[] a) {
-        int minCommon = a[0];
+    public int getLowestCommonMultiples(int[] array) {
+        int minCommon = array[0];
 
-        for (int value : a) {
-            int minCommonTemp = getMinCommonMultiples(minCommon, value);
-            if (minCommonTemp >= minCommon) {
-                minCommon = minCommonTemp;
-            }
+        for (int value : array) {
+            minCommon = getLowestCommonMultiples(minCommon, value);
         }
         return minCommon;
     }
 
-    public int getMaxCommonDivisor (int a, int b) {
+    public int getMaxCommonDivisors(int a, int b) {
         if (a == 0 || b == 0) {
-            return Math.abs (a+b);
+            return Math.abs(a + b);
         }
         while (a != b) {
             if (a >= b) {
@@ -28,7 +25,7 @@ public class Exercise5 {
         return a;
     }
 
-    public int getMinCommonMultiples (int a, int b) {
-        return (a*b)/getMaxCommonDivisor (a,b);
+    public int getLowestCommonMultiples(int a, int b) {
+        return (a * b)/getMaxCommonDivisors(a, b);
     }
 }
