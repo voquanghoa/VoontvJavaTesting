@@ -52,6 +52,14 @@ public class Exercise10Test {
         assertEquals(exercise10.getDayRemainingInYear(10,10,1990),82);
     }
 
+    @Test
+    public void test_checkCorrectDay() {
+        Exercise10 exercise10 = new Exercise10();
+        assertTrue(exercise10.checkCorrectDay(26));
+        assertTrue(exercise10.checkCorrectDay(1));
+        assertFalse(exercise10.checkCorrectDay(43));
+    }
+
     @Test (expected = RuntimeException.class)
     public void test_getDayRemainingInYear_Exception() {
         Exercise10 exercise10 = new Exercise10();
