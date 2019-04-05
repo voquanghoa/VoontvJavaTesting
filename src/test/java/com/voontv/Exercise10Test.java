@@ -53,8 +53,8 @@ public class Exercise10Test {
     }
 
     @Test (expected = RuntimeException.class)
-    public void test_getDayRemainingInYear_Exception() throws RuntimeException {
+    public void test_getDayRemainingInYear_Exception() {
         Exercise10 exercise10 = new Exercise10();
-        assertEquals(exercise10.getDayRemainingInYear(10,36,1990),51);
+        exercise10.getDayRemainingInYear(10,36,1990);
     }
 }
