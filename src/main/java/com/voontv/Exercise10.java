@@ -56,6 +56,4 @@ public class Exercise10 {
         }
         return countDay;
     }
-
-
 }
