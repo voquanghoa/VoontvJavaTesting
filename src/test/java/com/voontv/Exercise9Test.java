@@ -44,7 +44,7 @@ public class Exercise9Test {
     }
 
     @Test
-    public void test_getDayRemainingInMonth() {
+    public void test_getDayRemainingInMonth() throws RuntimeException {
         Exercise9 exercise9 = new Exercise9();
         assertEquals(exercise9.getDayRemainingInMonth(23,11,1998),7);
     }
