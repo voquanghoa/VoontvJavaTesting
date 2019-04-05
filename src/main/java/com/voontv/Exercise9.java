@@ -29,6 +29,10 @@ public class Exercise9 {
         }
     }
 
+    public boolean checkCorrectDay(int day) {
+        return (day>=1 && day<=30);
+    }
+
     public boolean checkCorrectMonth(int month){
         return (month >= 1 && month <=12);
     }
@@ -37,9 +41,9 @@ public class Exercise9 {
         return (year >= 1990 && year <=3000);
     }
 
-    public int getDayRemainingInMonth(int day, int month, int year) throws RuntimeException{
+    public int getDayRemainingInMonth(int day, int month, int year) {
 
-        if(!checkCorrectYear(year) || !checkCorrectMonth(month)) {
+        if(!checkCorrectYear(year) || !checkCorrectMonth(month) || !checkCorrectDay(day)) {
             throw new RuntimeException("Invalid date");
         } else {
             return getDay(month, year) - day;
