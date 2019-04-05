@@ -49,8 +49,13 @@ public class Exercise9Test {
         assertEquals(exercise9.getDayRemainingInMonth(23,11,1998),7);
     }
 
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
+    @Test
+    public void test_checkCorrectDay() {
+        Exercise9 exercise9 = new Exercise9();
+        assertTrue(exercise9.checkCorrectDay(6));
+        assertTrue(exercise9.checkCorrectDay(16));
+        assertFalse(exercise9.checkCorrectDay(43));
+    }
 
     @Test (expected = RuntimeException.class)
     public void test_getDayRemainingInMonthWithExpectedException() {
