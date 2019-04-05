@@ -16,6 +16,7 @@ public class Exercise8Test {
         Exercise8 exercise8 = new Exercise8();
         assertEquals(exercise8.getDigitReverse(143),341);
         assertEquals(exercise8.getDigitReverse(4),4);
+        assertEquals(exercise8.getDigitReverse(40),4);
         assertEquals(exercise8.getDigitReverse(140),41);
     }
 }
