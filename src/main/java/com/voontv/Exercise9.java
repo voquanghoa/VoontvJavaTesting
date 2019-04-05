@@ -38,6 +38,7 @@ public class Exercise9 {
     }
 
     public int getDayRemainingInMonth(int day, int month, int year) throws RuntimeException{
+
         if(!checkCorrectYear(year) || !checkCorrectMonth(month)) {
             throw new RuntimeException("Invalid date");
         } else {

@@ -15,7 +15,7 @@ public class Exercise9Test {
         Exercise9 exercise9 = new Exercise9();
         assertTrue(exercise9.isLeapYear(2000));
         assertTrue(exercise9.isLeapYear(1464));
-        assertFalse(exercise9.isLeapYear(1463));
+        assertFalse(exercise9.isLeapYear(1461));
     }
 
     @Test
